@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 
+        CSS Cascading Style Sheet-služi da se stilizuje html stranica
+        Postoji tri načina da se navede stil nekoj stranici:
+        -Preko atributa style unutar etikete nekog elementa. 
+        <etiketa style="..."> </etiketa>
+        -Elementa style koji se navodi u elementu head
+        <style>
+            ....
+        </style>
+        -Preko elementa link koji se navodi u head < link rel="stylesheet" href="ime_fajla.css">
+
+        Stilovi se navode u obliku pravila:
+        selektor {
+            svojstvo1: vrednost1;
+            svojstvo2: vrednost2;
+            ...
+            svojstvon: vrednostn;
+        }
+
+        Parovi svojstvo: vrednost se nazivaju deklaracije. Selektor može da bude naziv nekog elementa koji se nalazi u htmlu
+        ili identifikator u obliku #id ili klasa u obliku .klasa.
+        Razlika identifikatora i klasa je u tome da što klasa može da ima više elemenata, dok identifikator određuje jedinstven 
+        element.
+        Postoje razna svojstva koja mogu da se iskoriste.
+        Selektori igraju ključnu ulogu u stilizovanju stranice. Neki od načina koje mogu da se koriste su:
+        p { color: green; } svi paragrafi imaju boju slova zelenu. Boja moze da se zadaje i uz pomoc rgb(0, 250, 0)
+                            gde brojevi predstavljaju odnose boja.
+        p#p1 { font-size: 12px; } paragraf sa identifikatorom p1 ima velicinu slova 12px. Brojevi se zadaju ili relativno ili apsolutno
+                                    Relativni brojevi se zadaju sa % ili sa em. Apsolutni brojevi su u obliku piksela, tipografskih tacaka
+                                    centrimetrima, incima ....
+        p.klasap { font-style: italic; }  paragrafi sa klasom klasap mogu da imaju stil italic, sto predstavlja iskosena slova. Pored font-style postoji
+                                        i font-weight koja odredjuje debljinu slova, font-family predstavlja familiju fontova koji mogu da se vide u pregledacu
+        
+        div p { border: black dashed 2px;} svi paragrafi u divovima imaju ivicu debljine 2px, isprekidanih linija i crne boje.
+                                            Postoji i razdvojena svojstva, border-width: 2px, border-style: dashed;, border-color: black;
+        h1, p {color: blue;} svi naslovi i  svi paragrafi imaju plavu boju slova;
+
+        Elementi htmla su struktuirani kao stablo. Tako isto vazi i za stilove. Ukoliko neko specificnije pravilo ne prevazidje zajednicke osobine
+        onda ce da ih nasledi.
+
+    -->
+    <style>
+        div {
+            background-color: blue;
+            width: 500px;
+            height: 400px;
+            font-size: 20px;
+            color: black;
+        }
+        
+        #poseban_div {
+            background-color: brown;
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body style="background-color: aqua;">
+    <div>
+        Ovaj div je plave boje sa crnim slovima.
+    </div>
+    <div id="poseban_div">
+        Ovaj div je braon boje sa zelenkastim slovima.
+    </div>
+</body>
+
+</html>

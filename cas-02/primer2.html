@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 
+        Postoje blokovski i linijski elementi u html dokumentu. Linijski elementi mogu da sadrze samo tekst
+        dok blokovski elementi mogu da sadrze linijske i druge blokovse elemente.
+        Blokovski elementi rade na principu modela kutije. Kada se zadaju dimenzije nekom bloku te dimenzije se odnose na
+        sadrzaj bloka. Pored sadrzaja, postoje:
+        Punjenja (padding) koji odgovara unutrasnjim marginama nekog bloka. Odnosno koliko je sadrzaj odvojen od ivice bloka.
+        Ivica bloka ili granica bloka koja ima odredjenu debljinu.
+        Margine koje predstavljaju razdaljinu bloka od ostalih elemenata na stranici.
+        Sve ove velicine dodaju velicini bloka. Ukoliko se dodaju neke od njih blok postaje veci.
+        Margine i punjenje mogu da se zadaju na razlicite nacine
+        margin/padding: top right bottom left;
+                        top right-left bottom;
+                        top-botom- right-left;
+                        all;
+        ili pojedinacno margin-top: 20px; margin-left: 40cm; margin-bottom: 50%;
+        vrednost ovih svojstava su brojevi.
+        border-radius se odnosi na zaobljenje ivica blokova. Vrednost su brojevi. Ukoliko se navede border-radius misli se 
+        na sve ivice. Moguce je i preciziranje
+    -->
+    <style>
+        div {
+            background-color: rgb(63, 63, 145);
+            width: 500px;
+            height: 400px;
+            font-size: 20px;
+            color: black;
+            margin: 100px 90px 80px 20px;
+            padding: 50px 60px;
+        }
+        
+        #poseban_div {
+            background-color: yellow;
+            color: green;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Ovaj div je plave boje sa crnim slovima.
+    </div>
+    <div id="poseban_div">
+        Ovaj div je braon boje sa zelenkastim slovima.
+    </div>
+</body>
+
+</html>

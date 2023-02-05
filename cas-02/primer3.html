@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 
+        Do sada su svi blokovi bili blizu ivice ekrana. Dok su se marginama samo neznatno pomerali udesno.
+        Na racunaru postoji koordinatni sistem, stavise postoji trodimenzionalni koordinatni sistem.
+        Uz pomoc njega blokovski elementi mogu da se pozicioniraju do odredjenog dela ekrana. Levo, Desno, Gore, Dole, Napred, Nazad
+        Svojstvo koje se koristi za pozicioniranje je position. Njegove vrednosti su:
+        static - rasporedjeni su onako kao sto su napisani i pomeranje ne utice na njih
+        relative - blok se rasporedjuje u odnosu na njegovu staticku poziciju. Ako je neki div bio prvi u nizu divova
+            moze da se pomeri udesno u odnosu na svoju originalnu poziciju i da ne poremeti poredak ostalih divova
+        absolute - blok se rasporedjuje u odnosu na nestatickog pretka. Ukoliko su svi preci staticki pomera se u odnosu na
+            body. Obicno se koristi u kombinaciji sa relative, predak ima position: relative i pomera se sadrzaj u odnosu na njega.
+        fixed - fiksiran blok. Pomera se zajedno sa skrolovanjem i remeti raspored ostalim blokovima.
+    -->
+    <style>
+        div {
+            width: 400px;
+            height: 200px;
+        }
+        
+        #statican {
+            background-color: goldenrod;
+            position: static;
+            left: 1000px;
+            /*razdaljina od leve ivice ekrana je 1000px, odnosno pomeramo udesno*/
+        }
+        
+        #fiksiran {
+            background-color: blue;
+            position: fixed;
+            left: -200px;
+            /*razdaljina od leve ivice je -200px odnosno pomeramo ulevo*/
+        }
+        
+        #relativan {
+            background-color: red;
+            position: relative;
+            left: 500px;
+            top: 100px
+            /*pomera se nadole i udesno u odnosu na svoju prethodnu poziciju*/
+        }
+        
+        .apsolutan {
+            background-color: rgb(234, 238, 18);
+            position: absolute;
+            left: 200px;
+            top: 100px
+        }
+        
+        #iza {
+            background-color: green;
+            position: absolute;
+            left: 100px;
+            z-index: -1;
+            /*sluzi za pomeranje blokova napred nazad po koordinatnom sistemu. Ukoliko se navede negativan broj smesta se iza svih 
+            elemenata. Naravno da bi se postigao ovaj efekat mora da bude nestaticki element*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="statican">
+
+        Ovaj div se nije ni pomerio
+    </div>
+    <div id="fiksiran">
+        Ovaj div iskace ispred ostalih jer je fiksiran.
+    </div>
+
+    <div id="relativan">
+        Ovaj div se pomera u odnosu na svoju prethodnu poziciju
+        <div class="apsolutan">
+            Ovaj div se pomera u odnosu na roditelja koji je relativan
+            <div id="iza">
+
+            </div>
+        </div>
+    </div>
+    <div class="apsolutan">
+        ovaj div se pomera u odnosu na body
+    </div>
+</body>
+
+</html>
