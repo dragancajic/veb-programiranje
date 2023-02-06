@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Primeri</title>
+</head>
+
+<body>
+    <h1>Pretraga:</h1>
+    <script>
+        function obrada(niska) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', '2.php?tekst=' + niska);
+            //xhr.open('POST', '1.php');
+            //xhr.send(niska);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('ispis').innerHTML = xhr.responseText;
+                }
+            }
+            xhr.send();
+        }
+
+        function pozovi() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    var vraceno = JSON.parse(xhr.response);
+                    var objekat = {
+                        'id': 10,
+                        name: 'neko ime'
+                    };
+                    var json_verzija = JSON.stringify(objekat);
+                    console.log(objekat);
+                    console.log(json_verzija);
+                }
+            }
+
+            xhr.onerror = function() {
+                window.alert("doslo je do neke greske: " + xhr.statusText);
+            }
+
+            xhr.send();
+        }
+    </script>
+    <form>
+        <input type="text" onkeyup="obrada(this.value)">
+        <input type="button" onclick="pozovi()">
+    </form>
+    <span id="ispis"></span>
+
+</body>
+
+</html>

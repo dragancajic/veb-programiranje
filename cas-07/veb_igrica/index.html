@@ -1,0 +1,47 @@
+
+<!--
+Ovo je primer kombinacije html, css i jquery biblioteke kao i mogucnosti js.
+Igrica ima jednostavne html elemente koji su stilizovani sa slikama.
+Igrac ima 3 zivota i moze da skuplja koliko zeli jaja u svoju korpu.
+Ukoliko izgubi te zivote onda se pokrecu elementi koji su na pocetku sakriveni
+i prikazuje se korisniku da je zavrsio igru ali da moze opet da pocne.
+-->
+<html>
+
+<head>
+  <title>Eggs</title>
+  <link href="style.css" rel="stylesheet" />
+   
+</head>
+
+<body>
+
+<audio id="catch" src="catch.mp3"></audio>
+<audio id="break" src="break.mp3"></audio>
+<audio id="cought" src="cought.mp3"></audio>
+<div id="koka1">
+	<!--<img id="slika_koke" src="./slike/koka.png"> -->
+</div>
+<div id="koka2"></div>
+<div id="koka3"></div>
+<div id="life_okvir">Life:
+<span id="life">3</span>
+</div>
+<div id="jaje1">
+	<!--<img id="slika_koke" src="./slike/koka.png"> -->
+</div>
+<div id="jaje2"></div>
+<div id="jaje3"></div>
+<div id="gnezda"></div>
+<div id = "sunce"></div>
+<div id="kraj">GAME OVER</div>
+<div id="game_over"></div>
+<div id ="pod"></div>
+<div id="korpa"><span id="points">0</span></div>
+<div id= "restart">Restart</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--<script src="jquery-3.4.1.slim.min.js"></script> -->
+  <script src="index.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

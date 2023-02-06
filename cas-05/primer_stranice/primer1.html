@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Primer osluskivaca</title>
+    <meta charset="UTF-8">
+
+    <style>
+        button {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(85, 85, 131);
+            color: rgb(202, 187, 166);
+            margin-right: 30px;
+        }
+        
+        #kvadratic {
+            margin: 80px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(137, 115, 214);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="povecaj">Povecaj</button>
+    <button id="smanji">Smanji</button>
+
+    <div id='kvadratic'>
+
+    </div>
+
+    <script>
+        let dugme_povecaj = document.getElementById('povecaj');
+        let dugme_smanji = document.getElementById('smanji');
+        let kvadratic = document.getElementById('kvadratic');
+        let korak = 50;
+        let dimenzija = 50;
+
+        function povecaj() {
+
+            dimenzija += korak;
+            kvadratic.style.width = dimenzija + "px";
+            kvadratic.style.height = dimenzija + "px";
+        }
+
+        function smanji() {
+            if (dimenzija - korak <= 0)
+                return;
+            dimenzija -= korak;
+            kvadratic.style.width = dimenzija + "px";
+            kvadratic.style.height = dimenzija + "px";
+        }
+
+        if (dugme_povecaj == null || dugme_smanji == null || kvadratic == null) {
+            console.log('nemamo dovoljno elemenata');
+        } else {
+            dugme_povecaj.onclick = povecaj;
+            console.log(dugme_povecaj);
+            //dugme_povecaj.addEventListener('click', povecaj);
+            dugme_smanji.addEventListener('click', smanji)
+        }
+    </script>
+</body>
+
+</html>

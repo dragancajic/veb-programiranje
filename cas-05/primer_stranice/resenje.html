@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Primer css</title>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            background-image: url("slike/stars.jpeg");
+            background-repeat: repeat;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        div.kutija {
+            width: 600px;
+            height: 400px;
+            background-color: rgb(119, 202, 140);
+            border-color: rgb(93, 160, 129);
+            border-width: 10px;
+            border-style: solid;
+            position: relative;
+            margin-bottom: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            border-top-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+        }
+        
+        #navigacija {
+            background-color: rgb(122, 221, 167);
+            width: 800px;
+            height: 80px;
+            /*position: relative;*/
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        
+        .kartice {
+            background-color: rgb(79, 151, 112);
+            /* position: absolute;
+            top: 10px;*/
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-left: 20px;
+            padding: 20px;
+            height: 20px;
+        }
+        /* div#kartica1 {
+            left: 60px;
+        }
+        
+        div#kartica2 {
+            left: 300px;
+        }
+        
+        div#kartica3 {
+            left: 540px;
+        }*/
+        
+        div#slika {
+            background-image: url("slike/planetexp.jpg");
+            background-repeat: round;
+            width: 240px;
+            height: 320px;
+            top: 50px;
+            left: 30px;
+            position: absolute;
+            border-top-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+        }
+        
+        div#tekst {
+            background-color: aliceblue;
+            width: 120px;
+            height: 200px;
+            top: 50px;
+            left: 300px;
+            text-align: center;
+            position: absolute;
+            border-top-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            padding: 60px;
+        }
+        
+        table {
+            height: 200px;
+            width: 400px;
+            background-color: aliceblue;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        
+        td,
+        th {
+            background-color: rgb(223, 34, 34);
+            border: 1px;
+            border-style: double;
+        }
+        
+        h1 {
+            position: absolute;
+            left: 100px
+        }
+        
+        a {
+            color: rgb(14, 13, 13);
+            font-size: 20px;
+            /*position: absolute;
+            top: 20px;
+            left: 20px;*/
+        }
+        
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+        }
+        
+        figure {
+            position: absolute;
+            left: 30px;
+            top: 100px;
+        }
+        
+        figure#leela {
+            left: 200px;
+        }
+        
+        figure#bender {
+            left: 370px;
+        }
+        
+        figcaption {
+            font-size: 21px;
+            color: rgb(223, 34, 34);
+        }
+        
+        #levi {
+            position: absolute;
+            left: 60px;
+            top: 50px;
+            height: 270px;
+            width: 240px;
+        }
+        
+        #desni {
+            position: absolute;
+            left: 330px;
+            top: 50px;
+            height: 270px;
+            width: 240px;
+        }
+        
+        input {
+            border-color: blue;
+            border-width: 2px;
+            border-style: dashed;
+            padding: 5px;
+        }
+        
+        input[type=text]:focus,
+        input[type=password]:focus,
+        input[type=email]:focus,
+        input[type=tel]:focus {
+            background-color: rgb(119, 150, 83);
+            color: wheat;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="navigacija">
+        <li class="kartice" id="kartica1">
+            <a href="#prva_kutija">O seriji</a>
+        </li>
+        <li class="kartice" id="kartica2">
+            <a href="#druga_kutija">Sezone</a>
+        </li>
+        <li class="kartice" id="kartica3">
+            <a href="#treca_kutija">Glavni likovi</a>
+        </li>
+        <li class="kartice" id="kartica4">
+            <a href="#cetvrta_kutija">Kvizovi</a>
+        </li>
+    </ul>
+    <div class="kutija" id="prva_kutija">
+        <div id="slika">
+
+        </div>
+        <div id="tekst">
+            Dobre vesti ljudi. Idemo na planetu Dzinovskih pcela.
+        </div>
+    </div>
+    <div class="kutija" id="druga_kutija">
+        <h1>Primer tabele</h1>
+        <table>
+            <tr>
+                <th rowspan="2">Sezone</th>
+                <th rowspan="2">Epizode</th>
+                <th colspan="2">
+                    Prikazivanje
+                </th>
+            </tr>
+            <tr>
+                <th>Prvo prikazivanje</th>
+                <th>Poslednje prikazivanje</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>13</td>
+                <td>28.3.1999</td>
+                <td>14.11.1999</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>19</td>
+                <td>21.11.1999</td>
+                <td>3.12.2000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>22</td>
+                <td>21.1.2001</td>
+                <td>8.12.2002</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>18</td>
+                <td>10.2.2002</td>
+                <td>10.8.2003</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>16</td>
+                <td>23.3.2008</td>
+                <td>30.8.2009</td>
+            </tr>
+        </table>
+    </div>
+    <div class="kutija" id="treca_kutija">
+        <figure id="fry">
+            <figcaption>Philip J. Fry</figcaption>
+            <img src="slike/fry.png" alt="fry">
+        </figure>
+        <figure id="leela">
+            <figcaption>Leela</figcaption>
+            <img src="slike/leela.jpg" alt="leela">
+
+        </figure>
+        <figure id="bender">
+            <figcaption>Bender</figcaption>
+            <img src="slike/bender.webp" alt="bender">
+
+        </figure>
+
+    </div>
+
+    <div class="kutija" id="cetvrta_kutija">
+        <form>
+            <div id="levi">
+                <label for="korisnicko_ime">Korisnicko ime</label>
+                <br>
+                <input type="text" name="korisnicko_ime" id="korisnicko_ime" required>
+                <br>
+
+                <label for="lozinka">Lozinka</label>
+                <br>
+                <input type="password" name="lozinka" id="lozinka" required>
+                <br>
+                <label for="telefon">Telefon</label>
+
+                <br>
+
+                <input type="tel" name="telefon" id="telefon" placeholder="+381662312312">
+                <br>
+                <label for="email">E-mail</label>
+                <br>
+
+                <input type="email" name="email" id="email" readonly>
+                <br>
+                <label>Koja godina je bila kada je Fraj upao u kriogensku kapsulu?</label> <br>
+                <input type="radio" name="godina" id="1989" value="1989">1989
+                <br>
+                <input type="radio" name="godina" id="1999" value="1999">1999
+                <br>
+                <input type="radio" name="godina" id="2989" value="2989">2989
+                <br>
+                <input type="radio" name="godina" id="2999" value="2999" checked>2999
+                <br>
+                <input type="submit" value="Posalji" onclick="window.alert('poslali smo serveru')"> <input type="reset" value="Obrisi">
+
+            </div>
+            <div id="desni">
+                <label>Koji od ponudjenih su clanovi posade Planet ekspresa:</label> <br>
+                <input type="checkbox" name="posada" id="fraj" value="fraj">Fraj
+                <br>
+                <input type="checkbox" name="posada" id="zap" value="zap">Zap Branigan
+                <br>
+                <input type="checkbox" name="posada" id="kif" value="kif" checked>Kif
+                <br>
+                <input type="checkbox" name="posada" id="bender" value="bender">Bender
+                <br>
+                <input type="checkbox" name="posada" id="lrrr" value="lrrr">Lrrr
+                <br>
+
+                <label for="brat">Kako se zove Frajev brat</label>
+                <select name="brat" id="brat">
+                <option value="0">---Odaberite ime---</option>
+                <option value="frenki">Frenki</option>
+                <option value="jenki" selected>Jenki</option>
+                <option value="jensi">Jensi</option>
+            </select>
+                <br>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

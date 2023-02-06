@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formular osnovno</title>
+    <style>
+    
+        input[type="text"]:focus{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <label for="kor_ime">Korisnicko ime:</label>
+    <br>
+    <input type="text" id="kor_ime" name="kor_ime" maxlength = "50" placeholder = "korisnicko ime">
+    <br>
+    <label for="sifra">Sifra:</label>
+    <br>
+    <input type="password" id="sifra" name="sifra" placeholder = "sifra">
+    <br>
+    <input type="radio" name="kurs" value="VEBP" checked> VEBP
+    <input type="radio" name="kurs" value="Analiza"> Analiza
+    <input type="radio" name="kurs" value="Verovatnoca"> Verovatnoca
+    <br>
+    <br>
+    <input type="checkbox" name="vp" value="vezbe" checked> Vezbe
+    <input type="checkbox" name="vp" value="predavanje"> Predavanje
+    <br>
+    <select name="ljubimci">
+        <optgroup label="Domace">
+            <option value="pas">Pas</option>
+            <option value="macka">Macka</option>
+        </optgroup>
+        <optgroup label="Egzoticne">
+            <option value="zmija">Zmija</option>
+            <option value="zmija">Tigar</option>
+            <option value="hrcak">Hrcak</option>
+        </optgroup>
+    </select>
+    
+    <input list="instrumenti">
+    <datalist id = "instrumenti">
+        <option value="Violina">Violina</option>
+        <option value="Klavir">Klavir</option>
+        <option value="Okarina">Okarina</option>
+    </datalist>
+    <br>
+        <textarea rows = "10" cols="30" name="komentar" placeholder="upisite komentar">
+        </textarea>
+    
+    <br>
+    <input type="submit" value="Posalji">
+    <br>
+    <input type="button" value="Dugme" disabled>
+    
+</form>
+</body>
+</html>

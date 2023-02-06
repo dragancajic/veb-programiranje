@@ -1,0 +1,197 @@
+body{
+	background-image: url("./slike/pozadina.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index:200;
+}
+
+#gnezda{
+	margin-top: 8%;
+	background-color: #A52A2A;
+	height: 2%;
+
+}
+
+
+#koka1{
+	position:absolute;
+	background-image: url("./slike/koka.png");
+	top: 1%;
+	width: 20%;
+	height: 20%;
+	left: 25%;
+	background-size: contain;
+	background-repeat: no-repeat;
+        z-index: 100;
+}
+
+#koka2{
+	position:absolute;
+	background-image: url("./slike/koka.png");
+	top: 1%;
+	width: 20%;
+	height: 20%;
+	left: 45%;
+	background-size: contain;
+	background-repeat: no-repeat;
+        z-index: 100;
+}
+
+#koka3{
+	position:absolute;
+	background-image: url("./slike/koka.png");
+	top: 1%;
+	width: 20%;
+	height: 20%;
+	left: 65%;
+	background-size: contain;
+	background-repeat: no-repeat;
+        z-index: 100;
+}
+
+#pod{
+	position:absolute;
+	bottom: 0%;
+	background-color: green;
+	height: 5%;
+	z-index: 10;
+	width: 100%;
+
+}
+
+#korpa{
+	position:absolute;
+	background-image: url("./slike/korpa.png");
+	height: 30%;
+	width: 20%;
+	bottom: 0%;
+	z-index: 20;
+	left: 45%;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+
+}
+
+
+#jaje1{
+	position:absolute;
+	background-image: url("./slike/jaje1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 5%;
+	width: 5%;
+	left: 30%;
+	top: 8%;
+	z-index: 30;
+	visibility: hidden;
+
+}
+
+#jaje2{
+	position:absolute;
+	background-image: url("./slike/jaje2.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 5%;
+	width: 5%;
+	left: 50%;
+	top: 8%;
+	z-index: 30;
+	visibility: hidden;
+
+}
+
+
+#jaje3{
+	position:absolute;
+	background-image: url("./slike/jaje3.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 5%;
+	width: 5%;
+	left: 70%;
+	top: 8%;
+	z-index: 30;
+	visibility: hidden;
+
+}
+
+
+#points{
+	color: black;
+	font-size: 56px;
+	visibility: visible;
+	z-index:40;
+	position: absolute;
+        top: 30%;
+        left: 30%;
+}
+
+#life_okvir{
+	color: black;
+	font-size: 56px;
+	visibility: visible;
+	z-index:40;
+	position: absolute;
+	border: 1px solid black;
+        top: 9%;
+        left: 80%;
+}
+
+#game_over{
+	position:absolute;
+	background-image: url("./slike/game_over.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70%;
+	width: 30%;
+	left: 30%;
+	top: 30%;
+	display: none;
+	
+}
+
+
+#kraj{
+
+	position:absolute;
+	color: red;
+	font-size: 72px;	
+	height: 50%;
+	width: 50%;
+	left: 30%;
+	top: 20%;
+	z-index: 200;
+	display: none;
+	
+}
+
+
+
+#sunce{
+	position:absolute;
+	background-image: url("./slike/sun1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 15%;
+	width: 15%;
+	left: 0%;
+	top: 1%;
+	
+	
+}
+
+
+#restart{
+	position: absolute;
+	color: white;
+	font-size: 48px;
+	text-align: center;
+	background-color: red;
+	height: 10%;
+	width: 100%;
+	bottom: 0%;
+	left: 0%;
+	display:none;
+}

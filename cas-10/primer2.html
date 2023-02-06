@@ -1,0 +1,135 @@
+<!--Izmena zadatka iz 6. nedelje. Dodaje se asinhroni zahtev ka serveru, forma nece da ima informacije
+kojom metodom i kojoj serverskoj aplikaciji salje podatke. To se odredjuje uz pomoc ajax poziva u javascrtiptu.
+Kako bi funkcionisao sa tom sintaksom potrebno je da se ukljuci jQuery biblioteka.
+--->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #greska {
+            color: red;
+            font-size: 20px;
+        }
+        
+        label {
+            font-weight: bold;
+            color: sandybrown;
+            font-size: 20px;
+        }
+        
+        fieldset legend {
+            color: seagreen;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- action="1.php" method="POST" -->
+    <form id="formular" class="container" novalidate>
+
+        <div id="greska"></div>
+
+        <fieldset class="form-group">
+            <legend>Licni podaci</legend>
+            <div class="form-group">
+                <label for="ime_prezime">Ime i prezime</label>
+                <input type="text" id="ime_prezime" name="ime_prezime" maxlength="30" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="datum_rodjenja">Datum rodjenja</label>
+                <input type="date" id="datum_rodjenja" name="datum_rodjenja" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" autocomplete="off" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lozinka">Lozinka</label>
+                <input type="password" id="lozinka" name="lozinka" class="form-control" required>
+            </div>
+        </fieldset>
+
+
+        <fieldset class="form-group">
+            <legend>Obrazovanje</legend>
+            <div class="row form-group">
+                <div class="col-6">
+                    <label>Fakultet</label>
+                    <select name='fakultet' id="fakultet" class="form-control">
+                    <option value="">--------------------------</option>
+                    <optgroup label="tehnicki_fakulteti">
+                        <option value="matf" selected>MATF</option>
+                        <option value="etf">ETF</option>
+                        <option value="mf">MF</option>
+                    </optgroup>
+                    <optgroup label="drustveni_fakulteti">
+                        <option value="fil_f">Filoloski fakultet</option>
+                        <option value="filoz_f">Fizofski fakultet</option>
+                    </optgroup>
+                    <optgroup label="drugo">
+                        <option value="fdu">FDU</option>
+                    </optgroup>
+                </select>
+                </div>
+                <div class="col-6">
+                    <label>Godina studiranja</label>
+                    <div class="form-check form-check-inline">
+                        <input name="godina" value="1" type="radio" id="godina_1" class="grupa_radio_dugmica" /><label for="godina_1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="godina" value="2" type="radio" id="godina_2" class="grupa_radio_dugmica" /><label for="godina_2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="godina" value="3" type="radio" id="godina_3" class="grupa_radio_dugmica" /><label for="godina_3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="godina" value="4" type="radio" id="godina_4" class="grupa_radio_dugmica" /><label for="godina_4">4</label>
+                    </div>
+                </div>
+            </div>
+            <!-- dodatak -->
+            <div class="row">
+                <div class="col-6 ">
+                    <label>Univerziteti</label>
+
+                    <input list="svi_univerziteti" id="univerziteti" name='univerziteti' type="text" class="form-control">
+                    <datalist id="svi_univerziteti">
+                        <option value="BG">Univerzitet u Beogradu</option>
+                        <option value="NI">Univerzitet u Nisu</option>
+                        <option value="NS">Univerzitet u Novom Sadu</option>
+                        <option value="KG">Univerzitet u Kragujevcu</option>
+                    </datalist>
+                </div>
+                <div class="col-6">
+                    <label>Kursevi</label>
+                    <div class="form-check">
+                        <input name="kurs" id="veb" type="checkbox" class="form-check-input" value="veb"><label>Veb Programiranje</label>
+
+                    </div>
+                    <div class="form-check">
+                        <input name="kurs" id="an" type="checkbox" class="form-check-input" value="an"><label>Analiza</label>
+                    </div>
+                    <div class="form-check">
+                        <input name="kurs" id="st" type="checkbox" class="form-check-input" value="st"><label>Statistika</label>
+
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+        <input type="submit" class="btn-primary btn" value="Posalji podatke">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="provera.js"></script>
+</body>
+
+</html>
