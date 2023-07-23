@@ -1,57 +1,73 @@
-<!-- Treci primer html stranice:
+<!-- Cetvrti primer html stranice:
+
 Ovaj primer sadrzi slike i linkove.
-Slike i drugi slicni resursi ne pripadaju dokumentu vec se mogu naci na nekoj odredjenoj lokaciji.
-Ta lokacija moze da bude u obliku putanje ili urla, dovoljno je samo proslediti dokumentu lokacije resursa
-kako bi ih ukLjucio u svoj sadrzaj.
-Od nastanka html, koji je postao struktura www-a, je postojala mogucnost da se pojedine stranice povezu.
-To se radi specijalnom etiketom <a> koja ima atribut href. Stranice koje je moguce povezati se ili nalaze na internetu ili se nalaze na lokalnom racunaru.
-Samim tim moguce je stavljati relativne ili apsolutne putanje do tih resursa. 
-Apsolutna putanja podrazumeva pisanje celih putanja do tog fajla pocev od baznog direktorijuma (na Ubuntu home).
-Relativna putanja dozvoljava upotrebu putokaza do nekih konkretnih fajlova ili sam naziv fajla ukoliko se nalaze u istom folderu.
+Slike i drugi slicni resursi ne pripadaju dokumentu, vec se mogu naci na nekoj odredjenoj lokaciji.
+Ta lokacija moze da bude u obliku putanje ili url-a; dovoljno je samo proslediti dokumentu lokacije
+resursa kako bi ih ukljucio u svoj sadrzaj.
+Od nastanka HTML-a, koji je postao struktura WWW-a, je postojala mogucnost da se pojedine stranice
+povezu.
+To se radi specijalnom etiketom <a> koja ima atribut href. Stranice koje je moguce povezati se ili
+nalaze na internetu ili se nalaze na lokalnom racunaru.
+
+Samim tim moguce je stavljati relativne ili apsolutne putanje do tih resursa.
+
+Apsolutna putanja podrazumeva pisanje celih putanja do tog fajla pocev od baznog direktorijuma
+(na Ubuntu home).
+Relativna putanja dozvoljava upotrebu putokaza do nekih konkretnih fajlova ili sam naziv fajla
+ukoliko se nalaze u istom folderu.
 
 Jasno je da ce koriscenjem putanja doci do nekih ponavljanja teksta koji ponekad moze da unakazi kod.
-Radi citljivosti je uveden element sa etiketom <base/> koji ima atribut href i on cuva relativnu i apsolutnu putanju po izboru.
-Kao sto i sam naziv kaze, bice osnova svim ostalim elementima koji pokusavaju da naprave vezu izmedju nekog resursa i trenutnog dokumenta.
+Radi citljivosti je uveden element sa etiketom <base />, koji ima atribut href i on cuva relativnu i
+apsolutnu putanju po izboru.
+Kao sto i sam naziv kaze, bice osnova svim ostalim elementima koji pokusavaju da naprave vezu izmedju
+nekog resursa i trenutnog dokumenta.
 
-Takodje moze da se vidi i upotreba blokovskog elementa div. Sluzi za izdvajanje nekih celina u dokumentu 
+Takodje moze da se vidi i upotreba blokovskog elementa div. Sluzi za izdvajanje nekih celina u
+dokumentu.
 -->
 <!DOCTYPE html>
 <html>
 <head>
-
-    <meta charset="utf-8">
-    <title>  Primer linkova i slika </title>
-    <!-- <base href="./"/> Ovime je postavljena osnova na trenutni direktorijum u kome se fajl nalazi. Ovo je opcioni element, dokument funkcionise i bez njega. -->
+	<meta charset="utf-8">
+	<title>Primer linkova i slika</title>
+	<!-- <base href="./" /> Ovime je postavljena osnova na trenutni direktorijum u kome se fajl
+		nalazi. Ovo je opcioni element, dokument funkcionise i bez njega. -->
 </head>
 <body>
-    <!-- Jos jedan koristan blokovski element je element nav, koji se cesto koristi za pravljenje navigacije i gde se obicno smestaju linkovi ka resursima. Moguce je referisanje
-    i elemenata koji se nalaze unutar samog dokumenta medjutim, taj element koji se referise mora da ima identifikator. Kako biste videli efekat zakomentarisite obican nav i umesto njega stavite nav 
-    koji je ostavljen ispod njega.-->
-    <nav>
-    <!-- <nav style="height: 1000px;"> -->
-    <a href="#div_slike">Kliknite ovde da se prebacite na galeriju slika.</a>
-    <a href="http://www.vebp.matf.bg.ac.rs/" target="_blank">Kliknite ovde i stranica kursa ce se otvoriti u novom tabu pregledaca.</a>
-    <a href="primer3.html" target="_self">Kliknite ovde i stranica primer3.html ce se otvoriti u istom tabu pregledaca.</a>
-    </nav>
-    
-    <h2>Slika:</h2>
-    
-    <div id="div_slike">
-        <img src="slika/slika.jpeg">
-        <br/>
-        
-        <p>Ili korisenjem figure etikete:</p>
-        <figure>
-            <figcaption>Bombone</figcaption>
-            <img src="slika/slika.jpeg" title="bombone">
-        </figure>
-        <br/>
-        <p>Ukoliko slika ne postoji ili je doslo do neke greske pri dohvatanju moze da se napise alternativni tekst umesto slike</p>
-        <img src="slika.jpeg" alt="kada nemamo sliku pisemo opis slike">
-        <br/>
-    </div>
-    
-    <a href="https://www.w3schools.com/" target="_blank">Kliknite ovde da se prebacite na sajt <u>w3schools</u>.</a></br>
-    <a href="https://matfuvit.github.io/UVIT/vezbe/knjiga/" target="_blank">Kliknite ovde da se prebacite na sajt asistenta <mark>Nikole Ajzenhamera</mark>.</a>
+	<!-- Jos jedan koristan blokovski element je element nav, koji se cesto koristi za pravljenje
+	navigacije i gde se obicno smestaju linkovi ka resursima. Moguce je referisanje i elemenata koji
+	se nalaze unutar samog dokumenta, medjutim taj element koji se referise mora da ima identifikator.
+	Kako biste videli efekat zakomentarisite obican nav i umesto njega stavite nav koji je ostavljen
+	ispod njega. -->
+	<!--<nav>-->
+	<nav style="height: 1000px;">
+		<a href="#div_slike">Kliknite ovde da se prebacite na galeriju slika.</a>
+		<a href="http://www.vebp.matf.bg.ac.rs/" target="_blank">
+			Kliknite ovde i stranica kursa ce se otvoriti u novom tabu pregledaca.
+		</a>
+		<a href="primer3.html" target="_self">
+			Kliknite ovde i stranica primer3.html ce se otvoriti u istom tabu pregledaca.
+		</a>
+	</nav>
+	
+	<h2>Slika:</h2>
+	
+	<div id="div_slike">
+		<img src="slika/slika.jpeg">
+		<br /><!-- Nema nikakvog efekta; zasto? U koju vrstu elemenata spada img? ;-) -->
+		
+		<p>Ili korisenjem <code>figure</code> etikete:</p>
+		<figure>
+			<figcaption>Bombone</figcaption>
+			<img src="slika/slika.jpeg" title="bombone">
+		</figure>
+		<br />
+		<p>Ukoliko slika ne postoji ili je doslo do neke greske pri dohvatanju moze da se napise
+			alternativni tekst umesto slike</p>
+		<img src="slika.jpeg" alt="kada nemamo sliku pisemo opis slike">
+		<br /><br /><!-- tek drugi br element pravi razmak; 1 nema uticaja na img, hmm... -->
+	</div>
+	<a href="https://www.w3schools.com/" target="_blank">Kliknite ovde da se prebacite na sajt <u>w3schools</u>.</a><br />
+	<a href="https://matfuvit.github.io/UVIT/vezbe/knjiga/" target="_blank">Kliknite ovde da se prebacite na sajt asistenta <mark>Nikole Ajzenhamera</mark>.</a>
 </body>
 </html>

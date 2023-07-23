@@ -1,62 +1,74 @@
 <!-- Prvi primer html stranice:
-HTML oznacava HyperTextMarkupLanguage odnosno jezik za obelezavanje hiper teksta.
-Ovo nije programski jezik vec jezik za obelezavanje i sluzi da se logicki osmisli
-struktura nekog dokumenta.
+
+HTML oznacava HyperText Markup Language odnosno jezik za obelezavanje hiper teksta.
+Ovo nije programski jezik vec jezik za obelezavanje i sluzi da se logicki osmisli struktura
+nekog dokumenta.
 Sastavni delovi svakog dokumenta cine njegovi elementi koji su opisani etiketama (tags).
-Skoro svaki element je opisan parom tagova istog imena ali razlicitih oznaka <ime></ime>
-Postoje i samozatvarajuce etikete ali su oni u mnogo manjem broju, npr. img, meta, link, br, hr...
+Skoro svaki element je opisan parom tagova istog imena, ali razlicitih oznaka <ime></ime>.
+Postoje i samozatvarajuce etikete, ali su one u mnogo manjem broju, npr. img, meta, link, br, hr...
 
-Elementi imaju svoje atribute, nesto sto ce dodatno da izdvoji element od ostatka dokumenta. Ti atributi se 
-zadaju u otvarajucoj etiketi <ime_etikete ime_atributa="vrednost;"> i mogu biti "class" koji svrstava taj element u odredjenu klasu (gde svi elementi imaju isto ponasanje), "id" koji jasno kaze da je taj element jedinstven u odnosu na druge,
-"width", "height" koji odredjuju duzinu i visinu blokovskog elementa (na linijske elemente nemaju efekta),
-"title" zadaje naslov tog elementa koji moze da se primeti kada se u pregledacu predje misem preko tog elementa
-"src"  putanja do izvora slike, videa ili drugog oblika resursa... i mnogi drugi
+Elementi imaju svoje atribute, nesto sto ce dodatno da izdvoji element od ostatka dokumenta.
+Ti atributi se zadaju u otvarajucoj etiketi <ime_etikete ime_atributa="vrednost;"> i mogu biti
+"class" koji svrstava taj element u odredjenu klasu (gde svi elementi imaju isto ponasanje),
+"id" koji jasno kaze da je taj element jedinstven u odnosu na druge,
+"width", "height" koji odredjuju duzinu i visinu blokovskog elementa (na linijske elemente nemaju
+efekta),
+"title" zadaje naslov tog elementa koji moze da se primeti kada se u pregledacu predje misem preko
+tog elementa,
+"src"  putanja do izvora slike, videa ili drugog oblika resursa... i mnogi drugi.
 
-Svaki dokument pocinje etiketom <!DOCTYPE ime_verzije>koja odredjuje verziju html dokumenta.
-Najnovija i koju sada svi koriste je verzija 5. Nakon toga idu etikete <html></html> izmedju kojih se pise struktura dokumenta i informacije o samom dokumentu. Samim tim svaki dokument ima glavu i telo (head i body), gde se u body-ju pise sadrzaj stranice a u head-u informacije, veze ka ostalim stranicama ili spoljasnjim resursima.
+Svaki dokument pocinje etiketom <!DOCTYPE ime_verzije> koja odredjuje verziju html dokumenta.
+Najnovija i koju sada svi koriste je verzija 5. Nakon toga idu etikete <html></html> izmedju kojih
+se pise struktura dokumenta i informacije o samom dokumentu. Samim tim svaki dokument ima glavu i
+telo (head i body), gde se u body-ju pise sadrzaj stranice a u head-u informacije, veze ka ostalim
+stranicama ili spoljasnjim resursima.
 
-Ovde je prikaz jednostavne stranice koja ima naslov, jedan linijski element span, em, b, mark i blokovske elemente p, h1, h2, h3 (naslov). Pored ovih postoje i h4, h5 i h6, gde je h1 najveci naslov a h6 najmanji.
+Ovde je prikaz jednostavne stranice koja ima naslov, jedan linijski element span, em, b, mark i
+blokovske elemente p, h1, h2, h3 (naslov). Pored ovih postoje i h4, h5 i h6, gde je h1 najveci
+naslov a h6 najmanji.
 -->
 <!DOCTYPE html>
 <html>
 <head>
-    <!--
-    Nacin pozivanja spoljanjeg resursa koji je tipa css 
-    <link rel="stylesheet" type="text/css" href="ime_fajla.css">
-    -->
-    <meta charset="utf-8"><!-- Zadavanja opsega simbola koji se koriste u pisanju stranice, utf-8 omogucava koriscenje svih mogucih simbola koje poseduju jezici sveta
-    preko meta eikete mogu da se zadaju i ostale informacije koje se ticu autora dokumenta, tipa, rok vazenja itd.-->
-    <style>
-    
-    </style>
-    <!-- Takodje css ali kao blokovski element,
-    moguce je zadavanje atributa style u otvarajucoj etiketi-->
-    <script>
-    
-    </script>
-    <!--Blokovski element koji sadrzi javascript kod.
-    Sluzi da uvede dinamiku u html dokument. Takodje moze da se zada preko atributa script-->
-    <title> Prvi Primer</title>
-    
+	<!--
+	Nacin pozivanja spoljnjeg resursa koji je tipa css
+	<link rel="stylesheet" type="text/css" href="ime_fajla.css">
+	-->
+	<meta charset="utf-8"><!-- Zadavanja opsega simbola koji se koriste u pisanju stranice, utf-8
+	omogucava koriscenje svih mogucih simbola koje poseduju jezici sveta;
+	preko meta etikete mogu da se zadaju i ostale informacije koje se ticu autora dokumenta, tipa,
+	rok vazenja itd. -->
+	<style>
+	
+	</style>
+	<!-- Takodje css ali kao blokovski element,
+	moguce je zadavanje atributa style u otvarajucoj etiketi-->
+	<script>
+	
+	</script>
+	<!-- Blokovski element koji sadrzi javascript kod.
+	Sluzi da uvede dinamiku u html dokument. Takodje moze da se zada preko atributa script. -->
+	<title>Prvi Primer</title>
 </head>
 <body>
-<h1 title="zdravo"> Ovo je neki naslov </h1>
-<h2> Mali naslov </h2>
-<h3> Jos manji naslov </h3>
-<p> Ovo je jedan paragraf. </p>
-<!--
-html ne vidi visestruke razmake, nove redove ili uvlacenja.
-Za razdvajanje novih redova koristi se etiketa <br/>
-Ukoliko neko zeli da se tekst prikaze onako kao sto je napisano moze da koristi etikete
-<pre></pre> ili
-<code></code> i jos nekoliko drugih.
-Neki dodatni elementi koji se ticu teksta su:
-<span></span> mali istaknuti deo teksta
-<cite></cite> citiranje
-<q></q> linijsko ciriranje
-<blockquote></blockquote> blokovsko citiranje
-<pre>
-Ovde je moguce pisanje mnogo
+	<h1 title="zdravo">Ovo je neki naslov</h1>
+	<h2>Mali naslov</h2>
+	<h3>Jos manji naslov</h3>
+	<p>Ovo je jedan paragraf.</p>
+	<!--
+		html ne vidi visestruke razmake, nove redove ili uvlacenja.
+		Za razdvajanje novih redova koristi se etiketa <br/>.
+		Ukoliko neko zeli da se tekst prikaze onako kao sto je napisano moze da koristi etikete
+		<pre></pre> ili
+		<code></code> i jos nekoliko drugih.
+
+		Neki dodatni elementi koji se ticu teksta su:
+		<span></span> mali istaknuti deo teksta,
+		<cite></cite> citiranje,
+		<q></q> linijsko ciriranje,
+		<blockquote></blockquote> blokovsko citiranje,
+		<pre>
+		Ovde je moguce pisanje mnogo
 
 
 
@@ -68,8 +80,8 @@ Ovde je moguce pisanje mnogo
 
 
 
-blanko znakova
-</pre>
--->
+		blanko znakova
+		</pre>
+	-->
 </body>
 </html>

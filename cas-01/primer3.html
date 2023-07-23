@@ -1,106 +1,104 @@
 <!-- Treci primer html stranice:
-Ovaj primer sadrzi tabele. 
-Tabele se zadaju etiketama <table>;
-Sastoji se od elemenata <tr> sto oznacava table row, i u njemu se pisu celije 1 vrste sa oznakom <td> (table data)
-Posebno postoji <th> koji oznacava naziv jedne kolone u tabeli.
-Moguce je spajanje pojedinacnih celija u jednoj koloni ili vrsti uz pomoc atributa rowspan i colspan.
-Tabele je najbolje stilizovati jer su bez stilova donekle necitljive
 
+Ovaj primer sadrzi tabele. Tabele se zadaju etiketama <table>; sastoji se od elemenata
+<tr> sto oznacava table row, i u njemu se pisu celije jedne (1) vrste sa oznakom
+<td> (table data). Posebno postoji <th> koji oznacava naziv jedne kolone u tabeli.
+Moguce je spajanje pojedinacnih celija u jednoj koloni ili vrsti, uz pomoc atributa
+rowspan i colspan.
+
+Tabele je najbolje stilizovati jer su bez stilova donekle necitljive.
 -->
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<title>Primer tabela</title>
+	<style>
+		table {
+			background-color: salmon;
+			border-width: 3px;
+			border-style: dotted;
+			border-color: navy;
+			text-align: center;
+		}
 
-    <meta charset="utf-8">
-    <title>  Primer tabela </title>
-    <style>
-        table {
-            background-color: salmon;
-            border-width: 3px;
-            border-style: dotted;
-            border-color: navy;
-            text-align: center;
-        }
-        td {
-            background-color: white;
-            border-width: 1px;
-            border-style: solid;
-            border-color: black;
-            
-        }
-    </style>
+		td {
+			background-color: white;
+			border-width: 1px;
+			border-style: solid;
+			border-color: black;
+		}
+	</style>
 </head>
 <body>
-    <h4>Tabela:</h4>
-    <table>
-        <caption>Tabela 1: Naslov tabele</caption>
-        <tr>
-            <th>Naslov prve kolone</th>
-            <th>Naslov druge kolone</th>
-            <th>Naslov trece kolone</th>
-            <th>Naslov cetvrte kolone</th>
-            <th>Naslov pete kolone</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-        </tr>
-        
-    </table>
-    <!-- U ovom primeru se takodje nalazi i primer za markiranje pojedinih delova reci
-    <em> oznacava emphasize, pored toga ima i 
-    <b></b> za podebljanje reci (bold)
-    <i></i> za iskosene reci (italic)
-    <mark></mark> za bojenej pojedinih reci u recenici
-    -->
-     <h4>Tabela sa <em>spojenim</em> kolonama i vrstama:</h4>
-    <table>
-        <tr>
-            <th>Naslov prve kolone</th>
-            <th>Naslov druge kolone</th>
-            <th>Naslov trece kolone</th>
-            <th>Naslov cetvrte kolone</th>
-            <th>Naslov pete kolone</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td rowspan="3">2, 7, 12</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <!--<td>7</td>-->
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <!--<td>12</td>-->
-            <td>13</td>
-            <td colspan="2">14, 15</td>
-            <!--<td>15</td>-->
-        </tr>
-        
-    </table>
+	<h4>Tabela:</h4>
+	<table>
+		<caption>Tabela 1: Naslov tabele</caption>
+		<tr>
+			<th>Naslov prve kolone</th>
+			<th>Naslov druge kolone</th>
+			<th>Naslov trece kolone</th>
+			<th>Naslov cetvrte kolone</th>
+			<th>Naslov pete kolone</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>12</td>
+			<td>13</td>
+			<td>14</td>
+			<td>15</td>
+		</tr>
+	</table>
+	<!-- U ovom primeru se takodje nalazi i primer za markiranje pojedinih delova reci
+	<em> oznacava emphasize, pored toga ima i
+	<b></b> za podebljanje reci (bold)
+	<i></i> za iskosene reci (italic)
+	<mark></mark> za bojenje pojedinih reci u recenici.
+	-->
+	<h4>Tabela sa <em>spojenim</em> kolonama i vrstama:</h4>
+	<table>
+		<tr>
+			<th>Naslov prve kolone</th>
+			<th>Naslov druge kolone</th>
+			<th>Naslov trece kolone</th>
+			<th>Naslov cetvrte kolone</th>
+			<th>Naslov pete kolone</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td rowspan="3">2, 7, 12</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<!--<td>7</td>-->
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<!--<td>12</td>-->
+			<td>13</td>
+			<td colspan="2">14, 15</td>
+			<!--<td>15</td>-->
+		</tr>
+	</table>
 </body>
 </html>

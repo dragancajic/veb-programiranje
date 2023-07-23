@@ -1,87 +1,86 @@
 <!-- Drugi primer html stranice:
+
 U ovom primeru su prikazane liste koje mogu da se nadju u jednom html dokumentu.
 
 Postoje:
-nenumerisane liste (unordered lists) koje kao pocetak svojih stavki imaju tacku
-ili neki drugi oblik koji nije broj.
-numerisane liste (ordered lists) koje kao pocetak svojih stavki imaju brojeve koje pocinju od 1.
-moguce je da se zada pocetan broj, tj. od kog broja krece numerisanje liste. Moguce je staviti i slova.
-opisne ili deskriptivne liste (description lists) koje kao pocetak stavki imaju odredjen pojam koji treba
-da se pojasni ili opise.
+- nenumerisane liste (unordered lists) koje kao pocetak svojih stavki imaju tacku
+  ili neki drugi oblik koji nije broj.
+- numerisane liste (ordered lists) koje kao pocetak svojih stavki imaju brojeve koje pocinju od 1;
+  moguce je da se zada pocetan broj, tj. od kog broja krece numerisanje liste. Moguce je staviti i
+  slova.
+- opisne ili deskriptivne liste (description lists) koje kao pocetak stavki imaju odredjen pojam
+  koji treba da se pojasni ili opise.
 
 Moguce je i da neka stavka liste bude druga lista.
 -->
 <!DOCTYPE html>
 <html>
 <head>
-
-    <meta charset="utf-8">
-    <title>  Primer Listi</title>
-    
+	<meta charset="utf-8">
+	<title>Primer Listi</title>
 </head>
 <body>
-    <p>Jedna nenumerisana lista: </p>
-    <ul>
-        <li>Prva stavka</li>
-        <li>Druga stavka</li>
-        <li>Treca stavka</li>
-    </ul>
-    <br/>
-    
-    <p>Primer nenumerisane liste sa promenjenom tackom: </p>
-    <ul style="list-style-type: circle">
-        <li>Prva stavka</li>
-        <li>Druga stavka</li>
-        <li>Treca stavka</li>
-    </ul>
-    <br/>
-    
-    <!-- moguca je i nenumerisana lista koja kao tacke ima slike.
-    Takodje se zadaje uz pomoc style atributa a svojstvo se zove i zadaje ovako
-    list-style-image: url("putanja_do_resursa"); taj resurs moze da bude png, jpg, gif
-    -->
-    
-    <p>Jedna numerisana lista koja pocinje od broja 1000: </p>
-    <ol start="1000">
-        <li>Prva stavka</li>
-        <li>Druga stavka</li>
-        <li>Treca stavka</li>
-    </ol>
-    <br/>
-    
-    <p>Primer numerisane liste sa drugacijom numeracijom: </p>
-    <ol style="list-style-type: lower-alpha">
-        <li>Prva stavka</li>
-        <li>Druga stavka</li>
-        <li>Treca stavka</li>
-    </ol>
-    <br/>
+	<p>Jedna nenumerisana lista:</p>
+	<ul>
+		<li>Prva stavka</li>
+		<li>Druga stavka</li>
+		<li>Treca stavka</li>
+	</ul>
+	<br />
+	
+	<p>Primer nenumerisane liste sa promenjenom tackom:</p>
+	<ul style="list-style-type: circle">
+		<li>Prva stavka</li>
+		<li>Druga stavka</li>
+		<li>Treca stavka</li>
+	</ul>
+	<br />
+	
+	<!-- Moguca je i nenumerisana lista koja kao tacke ima slike.
+	Takodje se zadaje uz pomoc style atributa, a svojstvo se zove i zadaje ovako
+	list-style-image: url("putanja_do_resursa"); taj resurs moze da bude png, jpg, gif
+	-->
+	
+	<p>Jedna numerisana lista koja pocinje od broja 1000:</p>
+	<ol start="1000">
+		<li>Prva stavka</li>
+		<li>Druga stavka</li>
+		<li>Treca stavka</li>
+	</ol>
+	<br />
+	
+	<p>Primer numerisane liste sa drugacijom numeracijom:</p>
+	<ol style="list-style-type: lower-alpha">
+		<li>Prva stavka</li>
+		<li>Druga stavka</li>
+		<li>Treca stavka</li>
+	</ol>
+	<br />
 
-    <p>Primer opisne liste:  </p>
-    <dl>
-        <dt>Prva stavka</dt>
-        <dd>Opis prve stavke</dd>
-        <dt>Druga stavka</dt>
-        <dd>Opis druge stavke</dd>
-        <dt>Treca stavka</dt>
-        <dt>Cetvrta stavka</dt>
-        <dd>Opis cetvrte stavke</dd>
-    </dl>
-    <br/>
-    
-     <p>Primer ugnježdavanja listi </p>
-    <ul style="list-style-type: square">
-        <li>Prva stavka</li>
-        <li> Lista u listi:</br>
-            <ol style="list-style-type: upper-roman">
-                <li>Prva stavka</li>
-                <li>Druga stavka</li>
-                <li>Treca stavka</li>
-            </ol>
-        </li>
-        <li>Treca stavka</li>
-    </ul>
-    <br/>
-    
+	<p>Primer opisne liste:</p>
+	<dl>
+		<dt>Prva stavka</dt>
+		<dd>Opis prve stavke</dd>
+		<dt>Druga stavka</dt>
+		<dd>Opis druge stavke</dd>
+		<dt>Treca stavka</dt>
+		<dt>Cetvrta stavka</dt>
+		<dd>Opis cetvrte stavke</dd>
+	</dl>
+	<br />
+	
+	<p>Primer ugnježdavanja listi</p>
+	<ul style="list-style-type: square">
+		<li>Prva stavka</li>
+		<li> Lista u listi:<br />
+			<ol style="list-style-type: upper-roman">
+				<li>Prva stavka</li>
+				<li>Druga stavka</li>
+				<li>Treca stavka</li>
+			</ol>
+		</li>
+		<li>Treca stavka</li>
+	</ul>
+	<br />
 </body>
 </html>
